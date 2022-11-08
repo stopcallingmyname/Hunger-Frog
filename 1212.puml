@@ -1,0 +1,69 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class ArrayList {
+Object[] elementData
+size()
+}
+
+class World() {
+Object[] world
+Reset()
+Draw()
+}
+
+class Water() {
+Object[] water
+Reset()
+update_animation()
+Draw()
+}
+
+class Decorations{
+Object[] decoration
+Reset()
+Draw()
+}
+
+class Background{
+Object[] background
+Reset()
+update_animation()
+Draw()
+}
+
+class Player{
+Object[] player
+Reset()
+update_animation()
+Draw()
+update_tongue()
+update()
+}
+
+class Enemy{
+Object[] enemy
+Reset()
+move()
+ai()
+update_animation()
+update()
+Collider()
+}
+
+class Button{
+Object[] restart
+Object[] info
+Object[] menu
+Object[] play
+Object[] info_play
+Object[] exit
+Reset()
+move(t)
+ai()
+update_animation()
+update()
+Collider()
+}
+@enduml
