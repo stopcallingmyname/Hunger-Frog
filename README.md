@@ -37,11 +37,12 @@ The “Debug” module contains methods for rendering (drawing) the game interfa
 The “HungerFrog” module is the main module that contains the main loop with the game logic.
 Also in the project folder are folders: “SFX”, which contains all the sounds and music, the “Fonts” folder, which stores the fonts used in the game window, the “Sprites” folder,
 which contains all the sprites of the game, as well as a text file that records the highest score in the game (TopScore.txt).
-For a more detailed study of the structure of the program, a UML class diagram was compiled (see Picture 1).
-[Picture 1]
+For a more detailed study of the structure of the program, a UML class diagram was compiled.
+
 ![image](https://user-images.githubusercontent.com/56963796/200644200-9bd70dfa-2a13-40a0-962e-200a92924859.png)
 
 > Software Implementation
+
 As described earlier, we use 6 classes: "Player", "Enemy", "Background", "Water", "World", "Button" and "Decorations". Each class describes the corresponding methods for organizing the work of the application. Let's consider each method in more detail.
     Methods of the “World” class:
 __init__() is a special method,
@@ -87,35 +88,33 @@ Methods of the "Button" class:
 __init__ () is a special method that is automatically executed when a new instance is created;
 Draw () - is responsible for drawing objects of the Button class and checks for a collision of the object with the mouse, it also contains the button animation logic.
 
-When the application is launched, a game window appears, in the center of the screen there is a game menu (see Picture 2), in which the user can: start the game by pressing the “Play” button,
-read a brief tour of the game in the information menu (see Picture 3), when you press the “Info” button, also from the information menu section, the user will have access to a button to start the game process. And finally, exit the game by pressing the “Exit” button.
+When the application is launched, a game window appears, in the center of the screen there is a game menu, in which the user can: start the game by pressing the “Play” button,
+read a brief tour of the game in the information menu, when you press the “Info” button, also from the information menu section, the user will have access to a button to start the game process. And finally, exit the game by pressing the “Exit” button.
 Game process:
 When starting the level, the user observes the island,
 located in the center of the screen, the character (frog), which he will control in the future, as well as his opponents (mosquitoes), who move randomly at the top of the screen. Management is implemented using the A, D and space keys, to attack you must press the left mouse button (LMB).
 The user interface is: a hunger counter, a points counter, and a counter for the best result for all time in the game. Interface elements are located in the upper left corner of the game window.
 
-[Picture 2]
 ![image](https://user-images.githubusercontent.com/56963796/200644950-e224f156-276b-4986-87a4-588c5af40926.png)
 
-[Picture 3]
 ![image](https://user-images.githubusercontent.com/56963796/200645032-14b7430e-35d2-4688-acd8-ac5e09e3a6ec.png)
 
 > Software deployment and testing
-The essence of the game is to get the most points, for which, in turn, it is necessary to maintain the "satiation" of the character, collecting defeated opponents during their fall, which, when they disappear, give us bonus points and one unit of "hunger" (see Picture 4). If the falling opponent was not caught, the unit of "hunger" is not replenished,
+
+The essence of the game is to get the most points, for which, in turn, it is necessary to maintain the "satiation" of the character, collecting defeated opponents during their fall, which, when they disappear, give us bonus points and one unit of "hunger". If the falling opponent was not caught, the unit of "hunger" is not replenished,
 and only one point will be added to the score,
 By pressing the A and D keys, the character moves left and right respectively, we can also jump by pressing the Space key.
 When you start the gameplay, we see a small island in the ocean, the character himself and opponents in the form of mosquitoes flying randomly in the sky.
 The upper left corner shows the number of current hunger units, the current score and the best result of passing the game all the time.
 
-[Picture 4]
 ![image](https://user-images.githubusercontent.com/56963796/200645315-ef01c164-a0d4-469e-b001-aedbec28807c.png)
 
 The highest score is recorded in the TopScore.txt file and is overwritten if the player manages to break this record by scoring more points.
 When catching a defeated enemy, additional points are assigned (10 units), the SCORE and TOP SCORE values are changed, since the SCORE value is greater than the original TOP SCORE value.
 Also, when you exit the game, the TopScore.txt file will be overwritten.
 
-The game has no time limit and will continue until the player loses all "hunger" units or goes to feed the fish by falling into the ocean. At the end of the game, a window appears that prompts us to restart the game by pressing the “Play” button or exit to the main menu by pressing the “Menu” button. (See Picture 5).
-[Picture 5]
+The game has no time limit and will continue until the player loses all "hunger" units or goes to feed the fish by falling into the ocean. At the end of the game, a window appears that prompts us to restart the game by pressing the “Play” button or exit to the main menu by pressing the “Menu” button.
+
 ![image](https://user-images.githubusercontent.com/56963796/200645925-1eab08ed-d9cc-4a4f-915f-fadbc39a3405.png)
 
 > CONCLUSION
